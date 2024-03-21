@@ -12,10 +12,10 @@ const removeIgnoredFiles = async (files) => {
 
 module.exports = {
     "src/**/*.+(js|jsx|ts|tsx)": [
-        "npm run prettier",
+        "yarn prettier",
         async (files) => {
             const filesToLint = await removeIgnoredFiles(files);
-            return [`npm run lint ${filesToLint}`];
+            return [`yarnlint ${filesToLint}`];
         },
     ],
 };
