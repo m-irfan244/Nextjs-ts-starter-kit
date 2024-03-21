@@ -9,9 +9,9 @@
     "lint": "eslint --fix --ext .js,.jsx,.ts,.tsx ./src --ignore-path .gitignore --max-warnings=0",
     "postinstall": "node -e \"if (process.env.NODE_ENV !== 'production'){process.exit(1)} \" || husky install",
     "prettier": "prettier --ignore-path .gitignore --write \"**/*.+(js|jsx|json|ts|tsx)\"",
-    "check-format": "npm run prettier -- --list-different",
+    "check-format": "yarn prettier -- --list-different",
     "validate": "npm-run-all --parallel check-format && lint-staged",
-    "pre-commit-lint": "npm run check-format && yarn lint-staged"
+    "pre-commit-lint": "yarn check-format && yarn lint-staged"
   },
   "dependencies": {
     "next": "14.1.4",
