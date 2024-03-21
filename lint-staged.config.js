@@ -15,7 +15,7 @@ module.exports = {
         "yarn prettier",
         async (files) => {
             const filesToLint = await removeIgnoredFiles(files);
-            return [`yarnlint ${filesToLint}`];
+            return [`yarn lint ${filesToLint}`];
         },
     ],
 };
